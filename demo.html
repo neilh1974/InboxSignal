@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>InboxSignal Preview</title>
+    <link rel="stylesheet" href="src/styles.css">
+    <style>
+      body {
+        margin: 0;
+        background: #f6f8fb;
+        color: #202124;
+        font-family: Arial, sans-serif;
+      }
+
+      .page {
+        max-width: 980px;
+        margin: 0 auto;
+        padding: 34px 20px 80px;
+      }
+
+      .topbar {
+        margin-bottom: 18px;
+      }
+
+      .topbar h1 {
+        margin: 0 0 8px;
+        font-size: 24px;
+        line-height: 1.2;
+      }
+
+      .topbar p {
+        margin: 0;
+        color: #5f6368;
+        font-size: 14px;
+      }
+
+      .gmailShell {
+        border: 1px solid #dadce0;
+        border-radius: 8px;
+        background: #ffffff;
+        box-shadow: 0 8px 24px rgba(60, 64, 67, 0.12);
+        overflow: hidden;
+      }
+
+      .gmailHeader {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        padding: 14px 18px;
+        border-bottom: 1px solid #eef0f3;
+        color: #5f6368;
+        font-size: 13px;
+      }
+
+      table {
+        width: 100%;
+        border-collapse: collapse;
+      }
+
+      tr.zA {
+        height: 56px;
+        border-bottom: 1px solid #eef0f3;
+        background: #ffffff;
+      }
+
+      tr.zA.tintWarm {
+        background: #fff8e7;
+      }
+
+      tr.zA.tintCool {
+        background: #edf4ff;
+      }
+
+      tr.zA.darkRow {
+        background: #2f3642;
+        color: #f8fafd;
+      }
+
+      td {
+        padding: 0 14px;
+        font-size: 14px;
+        vertical-align: middle;
+      }
+
+      .yW {
+        width: 170px;
+        font-weight: 700;
+      }
+
+      .bog {
+        font-weight: 700;
+      }
+
+      .y2 {
+        margin-left: 10px;
+        color: #5f6368;
+      }
+
+      .darkRow .y2 {
+        color: #d7dce2;
+      }
+    </style>
+  </head>
+  <body>
+    <main class="page" role="main">
+      <section class="topbar">
+        <h1>Inbox list preview</h1>
+        <p>Signals appear before opening a thread. Rows include non white backgrounds for visual testing.</p>
+      </section>
+
+      <section class="gmailShell" aria-label="Sample Gmail inbox">
+        <div class="gmailHeader">Inbox sample list</div>
+        <table aria-label="Inbox messages">
+          <tbody>
+            <tr class="zA">
+              <td class="yW">Maya Patel</td>
+              <td>
+                <span class="bog">Vendor renewal and payment timing</span>
+                <span class="y2">Renewal fee is $4,800 and payment is due by Friday.</span>
+              </td>
+            </tr>
+            <tr class="zA tintWarm">
+              <td class="yW">Procurement</td>
+              <td>
+                <span class="bog">Approval required today</span>
+                <span class="y2">Please sign and return the renewal form today.</span>
+              </td>
+            </tr>
+            <tr class="zA tintCool">
+              <td class="yW">Finance</td>
+              <td>
+                <span class="bog">Invoice reminder</span>
+                <span class="y2">The invoice is past due and a late fee applies after the deadline.</span>
+              </td>
+            </tr>
+            <tr class="zA darkRow">
+              <td class="yW">Sam</td>
+              <td>
+                <span class="bog">Following up on next steps</span>
+                <span class="y2">Can you review this before close of business tomorrow?</span>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+    </main>
+
+    <script src="src/rules.js"></script>
+    <script src="src/content.js"></script>
+    <script>
+      window.setTimeout(function () {
+        if (window.inboxSignalStart) {
+          window.inboxSignalStart();
+        }
+      }, 100);
+    </script>
+  </body>
+</html>

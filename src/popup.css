@@ -1,0 +1,48 @@
+body {
+  width: 292px;
+  margin: 0;
+  background: #ffffff;
+  color: #202124;
+  font-family: Arial, sans-serif;
+}
+
+.popup {
+  padding: 14px;
+}
+
+.privacy {
+  margin-bottom: 12px;
+  padding: 12px;
+  border: 1px solid #c4e7ce;
+  border-radius: 8px;
+  background: #e6f4ea;
+  color: #0d652d;
+}
+
+.privacyTitle {
+  margin-bottom: 4px;
+  font-size: 16px;
+  font-weight: 800;
+}
+
+.privacyBody {
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.tuning {
+  padding: 2px 1px;
+}
+
+.signalCount {
+  margin-bottom: 6px;
+  font-size: 13px;
+  font-weight: 800;
+  line-height: 1.35;
+}
+
+.tuningNote {
+  color: #5f6368;
+  font-size: 12px;
+  line-height: 1.35;
+}

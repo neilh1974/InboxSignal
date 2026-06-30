@@ -1,0 +1,259 @@
+#grhRoot {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  z-index: 2147483646;
+  width: 238px;
+  box-sizing: border-box;
+  padding: 12px;
+  border: 1px solid rgba(32, 33, 36, 0.16);
+  border-radius: 8px;
+  background: #ffffff;
+  color: #202124;
+  box-shadow: 0 8px 24px rgba(32, 33, 36, 0.16);
+  font-family: Arial, sans-serif;
+  font-size: 13px;
+  line-height: 1.35;
+}
+
+#grhRoot,
+#grhRoot * {
+  box-sizing: border-box;
+}
+
+.grhTitle {
+  margin: 0 0 8px;
+  font-size: 13px;
+  font-weight: 700;
+  color: #202124;
+}
+
+.grhPrivacy {
+  margin-bottom: 8px;
+  padding: 7px 8px;
+  border: 1px solid #c4e7ce;
+  border-radius: 6px;
+  background: #e6f4ea;
+  color: #0d652d;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.grhSignalCount {
+  margin-bottom: 10px;
+  color: #5f6368;
+  font-size: 12px;
+}
+
+.grhActions {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 8px;
+}
+
+#grhRoot button {
+  min-height: 34px;
+  width: 100%;
+  border: 1px solid #dadce0;
+  border-radius: 6px;
+  background: #ffffff;
+  color: #1f1f1f;
+  font: inherit;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+#grhRoot button:hover,
+#grhRoot button:focus {
+  border-color: #5f6368;
+  background: #f8fafd;
+  outline: none;
+}
+
+#grhScanButton {
+  background: #1a73e8 !important;
+  border-color: #1a73e8 !important;
+  color: #ffffff !important;
+}
+
+#grhScanButton:hover,
+#grhScanButton:focus {
+  background: #1558b0 !important;
+}
+
+#grhResult {
+  margin-top: 9px;
+  color: #5f6368;
+  font-size: 12px;
+}
+
+.grhSignalRow {
+  box-shadow: inset 3px 0 0 var(--grh-row-outline), inset 9999px 0 0 var(--grh-row-fill);
+}
+
+.grhHighlight {
+  border-radius: 4px;
+  padding: 0 3px;
+  background: var(--grh-bg);
+  color: var(--grh-text);
+  box-shadow: inset 0 -1px 0 var(--grh-border);
+  cursor: help;
+  text-decoration: none;
+}
+
+.grhHighlight:focus {
+  outline: 2px solid var(--grh-border);
+  outline-offset: 2px;
+}
+
+.grhRowBadge {
+  display: inline-flex;
+  align-items: center;
+  min-height: 18px;
+  padding: 1px 6px;
+  border: 1px solid var(--grh-border);
+  border-radius: 999px;
+  background: var(--grh-bg);
+  color: var(--grh-text);
+  font-size: 11px;
+  font-weight: 700;
+  line-height: 1.2;
+  vertical-align: middle;
+}
+
+.grhSummaryCell {
+  box-sizing: border-box;
+  width: 260px;
+  min-width: 220px;
+  max-width: 300px;
+  padding: 6px 12px !important;
+  border-left: 1px solid rgba(95, 99, 104, 0.18);
+  color: #202124;
+  font-family: Arial, sans-serif;
+  font-size: 12px;
+  line-height: 1.25;
+  text-align: left;
+  vertical-align: middle;
+}
+
+div.grhSummaryCell {
+  margin-left: auto;
+}
+
+.grhSummaryLine {
+  overflow: hidden;
+  color: #202124;
+  font-weight: 700;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.grhActionList {
+  display: flex;
+  gap: 4px;
+  margin-top: 4px;
+  overflow: hidden;
+}
+
+.grhActionList span {
+  min-width: 0;
+  overflow: hidden;
+  padding: 2px 5px;
+  border-radius: 999px;
+  background: rgba(26, 115, 232, 0.1);
+  color: #174ea6;
+  font-size: 11px;
+  font-weight: 700;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.darkRow .grhSummaryCell {
+  border-left-color: rgba(255, 255, 255, 0.16);
+  color: #f8fafd;
+}
+
+.darkRow .grhSummaryLine {
+  color: #f8fafd;
+}
+
+.darkRow .grhActionList span {
+  background: rgba(232, 240, 254, 0.18);
+  color: #d7e3ff;
+}
+
+#grhTooltip {
+  position: absolute;
+  z-index: 2147483647;
+  width: 280px;
+  display: none;
+  padding: 10px 11px;
+  border: 1px solid rgba(32, 33, 36, 0.16);
+  border-radius: 8px;
+  background: #ffffff;
+  color: #202124;
+  box-shadow: 0 10px 28px rgba(32, 33, 36, 0.22);
+  font-family: Arial, sans-serif;
+  font-size: 12px;
+  line-height: 1.35;
+}
+
+#grhTooltip.grhVisible {
+  display: block;
+}
+
+.grhTooltipCategory {
+  margin-bottom: 5px;
+  font-weight: 700;
+}
+
+.grhTooltipText {
+  margin-bottom: 6px;
+}
+
+.grhTooltipAction {
+  margin-bottom: 8px;
+  color: #5f6368;
+}
+
+.grhFeedback {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 6px;
+}
+
+.grhFeedback button {
+  min-height: 28px;
+  border: 1px solid #dadce0;
+  border-radius: 6px;
+  background: #ffffff;
+  color: #202124;
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.grhFeedback button:hover,
+.grhFeedback button:focus {
+  border-color: #5f6368;
+  background: #f8fafd;
+  outline: none;
+}
+
+@media (max-width: 560px) {
+  #grhRoot {
+    right: 12px;
+    bottom: 12px;
+    width: 212px;
+  }
+
+  #grhTooltip {
+    width: 244px;
+  }
+
+  .grhSummaryCell {
+    width: 190px;
+    min-width: 170px;
+    max-width: 210px;
+  }
+}

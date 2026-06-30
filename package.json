@@ -1,0 +1,9 @@
+{
+  "name": "inboxsignal",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "check": "node --check src/content.js && node --check src/rules.js && node --check src/popup.js && node scripts/testLocalRules.mjs && node scripts/testSummaryIntegration.mjs"
+  }
+}

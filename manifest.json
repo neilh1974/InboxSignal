@@ -1,0 +1,19 @@
+{
+  "manifest_version": 3,
+  "name": "InboxSignal",
+  "version": "0.1.0",
+  "description": "Marks important Gmail rows locally in your browser.",
+  "action": {
+    "default_title": "InboxSignal",
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://mail.google.com/*"],
+      "js": ["src/rules.js", "src/content.js"],
+      "css": ["src/styles.css"],
+      "run_at": "document_idle"
+    }
+  ],
+  "permissions": ["storage"]
+}

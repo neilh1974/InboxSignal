@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>InboxSignal</title>
+    <meta
+      name="description"
+      content="InboxSignal marks important Gmail inbox rows locally before you open them."
+    >
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%232f6f73'/%3E%3Cpath d='M9 18h8v2H9zm0-5h14v2H9z' fill='white'/%3E%3C/svg%3E">
+    <link rel="stylesheet" href="src/launch.css">
+  </head>
+  <body>
+    <header class="siteHeader">
+      <a class="brand" href="#top" aria-label="InboxSignal home">
+        <span class="brandMark"></span>
+        <span>InboxSignal</span>
+      </a>
+      <nav class="siteNav" aria-label="Primary">
+        <a href="#privacy">Privacy</a>
+        <a href="#signals">Signals</a>
+        <a href="#install">Install</a>
+      </nav>
+    </header>
+
+    <main id="top">
+      <section class="hero">
+        <div class="heroCopy">
+          <p class="eyebrow">Private inbox signal layer</p>
+          <h1>InboxSignal</h1>
+          <p class="heroText">
+            See obligations, deadlines, payment risk, and follow up requests in Gmail before you open a thread.
+          </p>
+          <div class="heroActions" aria-label="Primary actions">
+            <a class="primaryButton" href="#install">Load in Chrome</a>
+            <a class="secondaryButton" href="#demo">View preview</a>
+          </div>
+          <dl class="proofGrid" aria-label="Product proof points">
+            <div>
+              <dt>100%</dt>
+              <dd>local scanning</dd>
+            </div>
+            <div>
+              <dt>0</dt>
+              <dd>API calls</dd>
+            </div>
+            <div>
+              <dt>1</dt>
+              <dd>click to clear</dd>
+            </div>
+          </dl>
+        </div>
+
+        <div id="demo" class="productPreview" aria-label="InboxSignal inbox preview">
+          <div class="mailTop">
+            <div class="searchBar">Search mail</div>
+            <div class="privacyPill">No data leaves your browser</div>
+          </div>
+          <div class="toolbar">
+            <button type="button">Scan inbox</button>
+            <button type="button">Clear signals</button>
+          </div>
+          <div class="inboxList">
+            <article class="mailRow">
+              <span class="sender">Maya Patel</span>
+              <span class="subject">Vendor renewal and payment timing</span>
+              <span class="snippet"><mark class="money">$4,800</mark> due by <mark class="deadline">Friday</mark></span>
+            </article>
+            <article class="mailRow warm">
+              <span class="sender">Procurement</span>
+              <span class="subject">Approval required today</span>
+              <span class="snippet"><mark class="action">Please sign</mark> and return the renewal form today</span>
+            </article>
+            <article class="mailRow cool">
+              <span class="sender">Finance</span>
+              <span class="subject">Invoice reminder</span>
+              <span class="snippet">Past due invoice with <mark class="warning">late fee</mark> after the deadline</span>
+            </article>
+            <article class="mailRow dark">
+              <span class="sender">Sam</span>
+              <span class="subject">Following up on next steps</span>
+              <span class="snippet">Can you review this before <mark class="deadline">tomorrow</mark></span>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="privacy" class="band">
+        <div class="sectionIntro">
+          <p class="eyebrow">Privacy contract</p>
+          <h2>Useful signal without handing over the inbox.</h2>
+        </div>
+        <div class="contractGrid">
+          <article>
+            <h3>Browser only</h3>
+            <p>Email text stays in the Gmail tab you already opened.</p>
+          </article>
+          <article>
+            <h3>No backend</h3>
+            <p>No server, no telemetry, and no message upload.</p>
+          </article>
+          <article>
+            <h3>Local learning</h3>
+            <p>Useful feedback improves the ranker on your device only.</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="signals" class="splitSection">
+        <div>
+          <p class="eyebrow">Sparse highlights</p>
+          <h2>It marks the parts you would regret missing.</h2>
+          <p>
+            InboxSignal focuses on concrete amounts, hard timing, required action, penalty language, missing details, and follow up requests. Weak inbox noise stays quiet.
+          </p>
+        </div>
+        <div class="signalStack" aria-label="Signal examples">
+          <span>Payment due by Friday</span>
+          <span>Approval required today</span>
+          <span>Late fee after deadline</span>
+          <span>Could you review tomorrow</span>
+        </div>
+      </section>
+
+      <section id="install" class="installBand">
+        <div>
+          <p class="eyebrow">Chrome prototype</p>
+          <h2>Load it locally and test it in Gmail.</h2>
+          <p>
+            The current prototype is an unpacked Chrome extension. It uses only local browser state and Gmail page access.
+          </p>
+        </div>
+        <ol class="installSteps">
+          <li>Open chrome://extensions</li>
+          <li>Turn on Developer mode</li>
+          <li>Choose Load unpacked</li>
+          <li>Select this project folder</li>
+          <li>Open Gmail and scan the inbox</li>
+        </ol>
+      </section>
+    </main>
+  </body>
+</html>
